@@ -7,6 +7,13 @@ export default class App extends Application {
   modulePrefix = config.modulePrefix;
   podModulePrefix = config.podModulePrefix;
   Resolver = Resolver;
+  engines = {
+    analytics: {
+      dependencies: {
+        services: [{ newAuth: 'auth' }],
+      },
+    },
+  };
 }
 
 loadInitializers(App, config.modulePrefix);
