@@ -21,7 +21,7 @@ module('Acceptance | application', function (hooks) {
         <p>Old Service Name: <span data-test-id="old mapping">{{this.oldAuthName.testingProperty}}</span></p>
       `
     );
-    assert.dom('[data-test-id="new mapping"]').hasNoText();
-    assert.dom('[data-test-id="old mapping"]').hasAnyText();
+    assert.dom('[data-test-id="new mapping"]').hasAnyText();
+    assert.dom('[data-test-id="old mapping"]').hasNoText();
   });
 });
